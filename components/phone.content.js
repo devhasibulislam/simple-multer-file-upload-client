@@ -16,7 +16,7 @@ const Content = () => {
     };
 
     const postUserInfo = async () => {
-      const request = await fetch(`http://localhost:5000/user/`, {
+      const request = await fetch(`https://smfu-simple-multer-file-upload.herokuapp.com/user/`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -40,7 +40,7 @@ const Content = () => {
     formData.append("avatar", event.target.files[0]);
 
     const postUserAvatar = async () => {
-      const request = await fetch(`http://localhost:5000/avatar/`, {
+      const request = await fetch(`https://smfu-simple-multer-file-upload.herokuapp.com/avatar/`, {
         method: "POST",
         body: formData,
       });

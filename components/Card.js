@@ -9,7 +9,7 @@ const Card = ({ _id, name, email, avatar, password }) => {
   // user info delete operation
   function handleRemoveUser(id) {
     const removeUser = async () => {
-      const request = await fetch(`http://localhost:5000/user/${id}`, {
+      const request = await fetch(`https://smfu-simple-multer-file-upload.herokuapp.com/user/${id}`, {
         method: "DELETE",
       });
       const response = await request.json();
@@ -28,7 +28,7 @@ const Card = ({ _id, name, email, avatar, password }) => {
             <pre data-prefix=">" className="flex items-center text-info">
               <code>
                 <Image
-                  src={`http://localhost:5000/${avatar}`}
+                  src={`https://smfu-simple-multer-file-upload.herokuapp.com/${avatar}`}
                   alt={_id}
                   height={50}
                   width={50}

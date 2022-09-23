@@ -20,7 +20,7 @@ const Modal = ({ _id, name, email, avatar, password, setModal }) => {
     };
 
     const updateUserInfo = async () => {
-      const request = await fetch(`http://localhost:5000/user/${_id}`, {
+      const request = await fetch(`https://smfu-simple-multer-file-upload.herokuapp.com/user/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
@@ -44,7 +44,7 @@ const Modal = ({ _id, name, email, avatar, password, setModal }) => {
     formData.append("avatar", event.target.files[0]);
 
     const postUserAvatar = async () => {
-      const request = await fetch(`http://localhost:5000/avatar/`, {
+      const request = await fetch(`https://smfu-simple-multer-file-upload.herokuapp.com/avatar/`, {
         method: "POST",
         body: formData,
       });
@@ -65,7 +65,7 @@ const Modal = ({ _id, name, email, avatar, password, setModal }) => {
           {/* ---------- modal header starts ---------- */}
           <div className="flex gap-x-4">
             <Image
-              src={`http://localhost:5000/${avatar}`}
+              src={`https://smfu-simple-multer-file-upload.herokuapp.com/${avatar}`}
               alt={_id}
               height={50}
               width={50}
