@@ -29,7 +29,7 @@ const Card = ({ _id, name, email, avatar, password }) => {
               <code>
                 <Image
                   src={`https://smfu-simple-multer-file-upload.herokuapp.com/${avatar}`}
-                  alt={_id}
+                  alt={avatar}
                   height={50}
                   width={50}
                   className="object-cover rounded-full shadow"
