@@ -16,7 +16,7 @@ const Content = () => {
     };
 
     const postUserInfo = async () => {
-      const request = await fetch(`https://smfu-simple-multer-file-upload.herokuapp.com/user/`, {
+      const request = await fetch(`https://smfu-simple-multer-file-upload.onrender.com/user/`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -40,7 +40,7 @@ const Content = () => {
     formData.append("avatar", event.target.files[0]);
 
     const postUserAvatar = async () => {
-      const request = await fetch(`https://smfu-simple-multer-file-upload.herokuapp.com/avatar/`, {
+      const request = await fetch(`https://smfu-simple-multer-file-upload.onrender.com/avatar/`, {
         method: "POST",
         body: formData,
       });
@@ -100,14 +100,14 @@ const Content = () => {
 
         {/* file upload field */}
         <div className="mb-4">
-          <label for="avatar" class="form-label inline-block text-gray-700">
+          <label htmlFor="avatar" className="form-label inline-block">
             Enter avatar
           </label>
           <input
             required
             type="file"
             name="avatar"
-            class="text-sm text-grey-500
+            className="text-sm text-grey-500
                   file:mr-5 file:py-2 file:px-6
                   file:rounded-full file:border-0
                   file:text-sm file:font-medium
@@ -123,7 +123,7 @@ const Content = () => {
         <input
           type="submit"
           value="Add Data"
-          className="flex mx-auto btn glass btn-wide text-black shadow mt-4"
+          className="flex mx-auto btn glass btn-wide text-black shadow mt-4 dark:text-white"
         />
       </form>
     </section>
